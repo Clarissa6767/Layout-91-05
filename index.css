@@ -1,0 +1,510 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+}
+/* membuat style pada header */
+.header{
+    background-color: pink;
+    padding:20px;
+    text-align:center;
+    color:rgb(51, 51, 125)
+}
+/* membuat style pada navigator/topnav */
+.topnav{
+    overflow:hidden;
+    background-color:rgb(115, 186, 115);
+}
+/* membuat style link pada navigator/topnav */
+.topnav a{
+    float:left;
+    display:block;
+    color:rgb(51, 51, 125);
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+}
+.topnav a:hover{
+    background-color: bisque;
+    color:rgb(107, 52, 52);
+}
+.column{
+    float:left;
+    padding:10px;
+    text-align: justify;
+}
+/* membuat style pada column kanan-kiri */
+.column.side{
+    width: 25%;
+}
+/* membuat style pada column tengah */
+.column.middle{
+    width:50%;
+}
+.row::after{
+    content: "";
+    display:table;
+    clear:both;
+}
+.Footer{
+    background-color: bisque;
+    padding:10px;
+    text-align:center;
+}
+
+body{
+    background-image: url(back.png);
+    background-size: cover;
+    background-position: center;
+}
+
+h2{
+    font-family:"curly shirley";
+    background-color: pink;
+    color: rgb(99,71,54);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+@font-face{
+    font-family: "curly shirley";
+    src: url("curlyshirley/Curly\ Shirley.ttf");
+}
+h3{
+    font-family:"curly shirley";
+    color: rgb(99,71,54);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 80px;
+}
+h1{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(99,71,54);
+    text-align: center;
+}
+@font-face{
+    font-family: "Chopin Script";
+    src: url("ChopinScript.otf");
+}
+
+div.biodata{
+    margin: 30px auto;
+    width: 70%;
+    background-color: rgba(99, 71, 54, 0.833);
+    color: pink;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+div.foto{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:3px dotted pink
+}
+div.foto img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+div.foto img.top{
+    opacity: 1;
+    z-index: 2;
+}
+
+div.foto:hover img.top {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+div.foto img.bottom {
+    opacity: 0;
+    z-index: 1;
+}
+
+div.foto:hover img.bottom {
+    opacity:1;
+    transform: scale (1.1);
+}
+div.grid-container{
+display: grid;
+grid-template-columns: repeat(3,0.25fr);
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+div.lukisan{
+    height:300px;
+    width:300px;
+    border-radius:20%;
+    background-color: transparent;
+}
+img.lukisan{
+    height:200px;
+    width: 200px;
+    border-radius:20%;
+    justify-content: center;
+    align-items: center;
+}
+div.lukisan:hover{
+    height: 270px;
+    width: 270px;
+    background-color: pink;
+    padding: 15px 15px 15 px 15 px;
+    border-radius: 10%;
+    box-shadow: 15px 15px 10px rgb(129, 94, 72); 
+}
+
+div.menulis{
+    height:300px;
+    width:300px;
+    border-radius:20%;
+    background-color: transparent;
+}
+img.menulis{
+    height:200px;
+    width: 200px;
+    border-radius:20%;
+    justify-content: center;
+    align-items: center;
+}
+div.menulis:hover{
+    height: 270px;
+    width: 270px;
+    background-color: pink;
+    padding: 15px 15px 15 px 15 px;
+    border-radius: 10%;
+    box-shadow: 15px 15px 10px rgb(129, 94, 72); 
+}
+
+div.musik{
+    height:300px;
+    width:300px;
+    border-radius:20%;
+    background-color: transparent;
+}
+
+img.musik{
+    height:200px;
+    width: 200px;
+    border-radius:20%;
+    justify-content: center;
+    align-items: center;
+}
+div.musik:hover{
+    height: 270px;
+    width: 270px;
+    background-color: pink;
+    padding: 15px 15px 15 px 15 px;
+    border-radius: 10%;
+    box-shadow: 15px 15px 10px rgb(129, 94, 72);
+}
+
+img.laufey{
+    animation: spin 6s linear infinite; 
+    height: 300px;
+    width: 300px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+p.hobi{
+  font-family:"Chopin Script";
+  font-size: 50px;
+  color: rgb(99,71,54);
+}
+
+p.lukisan{
+  font-size: 20px;
+  color: rgb(99,71,54);
+  font-weight: bold
+}
+
+p.menulis{
+    font-size: 20px;
+  color: rgb(99,71,54);
+  font-weight: bold
+}
+
+p.musik{
+    font-size: 20px;
+  color: rgb(99,71,54);
+  font-weight: bold
+}
+
+p.lagu{
+  font-family:"Chopin Script";
+  font-size: 50px;
+  color: rgb(99,71,54);
+}
+
+@font-face{
+    font-family: "curly shirley";
+    src: url("curlyshirley/Curly\ Shirley.ttf");
+}
+p.laufey{
+  font-size: 20px;
+  color: rgb(99,71,54);
+  font-weight: bold;
+}
+
+div.pasta{
+    height:300px;
+    width:300px;
+    border-radius:20%;
+    background-color: transparent;
+}
+img.pasta{
+    height:200px;
+    width: 200px;
+    border-radius:20%;
+    justify-content: center;
+    align-items: center;
+}
+div.pasta:hover{
+    height: 270px;
+    width: 270px;
+    background-color: pink;
+    padding: 15px 15px 15 px 15 px;
+    border-radius: 10%;
+    box-shadow: 15px 15px 10px rgb(129, 94, 72); 
+}
+
+div.xlb{
+    height:300px;
+    width:300px;
+    border-radius:20%;
+    background-color: transparent;
+}
+img.xlb{
+    height:200px;
+    width: 200px;
+    border-radius:20%;
+    justify-content: center;
+    align-items: center;
+}
+div.xlb:hover{
+    height: 270px;
+    width: 270px;
+    background-color: pink;
+    padding: 15px 15px 15 px 15 px;
+    border-radius: 10%;
+    box-shadow: 15px 15px 10px rgb(129, 94, 72); 
+}
+div.fries{
+    height:300px;
+    width:300px;
+    border-radius:20%;
+    background-color: transparent;
+}
+img.fries{
+    height:200px;
+    width: 200px;
+    border-radius:20%;
+    justify-content: center;
+    align-items: center;
+}
+div.fries:hover{
+    height: 270px;
+    width: 270px;
+    background-color:pink;
+    padding: 15px 15px 15 px 15 px;
+    border-radius: 10%;
+    box-shadow: 15px 15px 10px rgb(129, 94, 72); 
+}
+p.makan{
+  font-family:"Chopin Script";
+  font-size: 50px;
+  color: rgb(78,57,43);
+}
+p.pasta{
+  font-size: 20px;
+  color: rgb(99,71,54);
+  font-weight: bold
+}
+
+p.xlb{
+    font-size: 20px;
+  color: rgb(99,71,54);
+  font-weight: bold
+}
+
+p.fries{
+    font-size: 20px;
+  color: rgb(99,71,54);
+  font-weight: bold
+}
+
+p.bukufav{
+  font-family:"Chopin Script";
+  font-size: 50px;
+  color: rgb(78,57,43);
+}
+
+.morph-container {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.morph-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: opacity 0.6s ease-in-out;
+}
+
+.gambar1{
+  opacity: 1;
+}
+
+.gambar2{
+  opacity: 0;
+}
+
+.morph-container:hover {
+  width: 500px;
+  height: 300px;  
+}
+
+.morph-container:hover .gambar1{
+  opacity: 0;
+}
+
+.morph-container:hover .gambar2{
+  opacity: 1;
+}
+p.los{
+    font-size: 20px;
+  color: rgb(99,71,54);
+  font-weight: bold
+}
+p.ty{
+     font-family:"Chopin Script";
+    font-size: 50px;
+  color: rgb(99,71,54);
+  background-color: pink;
+}
+p.movfav{
+     font-family:"Chopin Script";
+    font-size: 50px;
+  color: rgb(99,71,54);
+}
+
+div.desc{
+    margin: 30px auto;
+    width: 200px;
+    height: 150px;
+    background-color: rgba(99, 71, 54, 0.833);
+    color: pink;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+img.poster{
+    width: 150px;
+    height: 220px;
+box-shadow: 15px 15px 10px rgb(129, 94, 72);
+}
+/*list style*/
+ol{
+    border:1px solid black;
+    padding: 15px 30px;
+    margin:10px;
+    list-style-position: inside;
+    background-color: pink;
+}
+ol li{
+    border: 1px solid black;
+    padding:15px 30px;
+    background-color: aquamarine;
+    text-align:justify;
+    margin:3px 0;
+}
+ul{
+    border: 1px solid black;
+    background-color:lavender;
+    margin:10px;
+    list-style-position: inside;
+    padding: 15px 30px;
+}
+ul li{
+    border: 1px solid black;
+    padding:5px;
+    background-color: lightblue;
+    text-align:justify;
+    margin:3px 0;
+}
+
+li.a{
+    background-color: bisque;
+}
+ul.b{
+    border:1px solid black;
+    background-color: lightgoldenrodyellow;
+    margin: 10px;
+}
+table, th, td, tr{
+    border: 1px solid black;
+}
+table{
+    border-collapse: collapse;
+    width: 60%;
+}
+th{
+    text-align: center;
+    height: 40px;
+    padding: 2px;
+    background-color: papayawhip;
+}
+tr{
+    background-color:pink;
+}
+tr:nth-child(even){
+    background-color: palegoldenrod;
+}
+tr:hover{
+    background-color: paleturquoise;
+}
