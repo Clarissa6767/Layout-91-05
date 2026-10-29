@@ -1,0 +1,582 @@
+body {
+  background-image: url(wallpaper.png);
+  background-size: cover; 
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center; 
+  min-height: 100vh;
+  margin: 0;
+}
+.header {
+    width: 100%;
+    background-color:pink;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+}
+.topnav {
+    width: 100%;
+    background-color: rgb(115, 186, 115);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.topnav a {
+    color:rgb(51, 51, 125);
+    text-decoration: none;
+    padding:14px 16px;
+}
+
+.topnav a:hover {
+    background-color: bisque;
+    color:rgb(107, 52, 52);
+}
+h2{
+    background-color: rgba(255, 228, 196, 0.79);
+    color: rgb(88, 53, 53);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+}
+.Footer{
+    width: 100%; 
+    background-color: pink;
+    text-align: center;
+    padding:0.5px;
+    box-sizing: border-box; 
+}
+
+div.grid-container-one,.grid-container-two{
+display: grid;
+grid-template-columns: repeat(3,0.25fr);
+justify-content: center;
+align-items: center;
+gap: 30px;
+} 
+
+div.grid-container-one{
+    margin-bottom: 30px;
+}
+
+@font-face {
+    font-family: "Chopin Script";
+    src: url("ChopinScript.otf");
+}
+
+h1.title {
+    font-size: 50px;
+    font-family: "Chopin Script";
+    color: antiquewhite;
+    font-weight: lighter;
+    display: block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1.title:hover{
+    color: #fbbc05;
+    transform: scale(1.2);
+}
+
+p.description {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: antiquewhite;
+    text-align: justify;
+}
+
+p.info{
+    font-size: 30px;
+    font-family: "Chopin Script", cursive, sans-serif;
+    font-weight: lighter;
+    color: antiquewhite;
+    text-align: center;
+}
+p.sejarah{
+    text-indent: 50px;
+    text-align: justify;
+}
+
+.isi{
+    font-size: 22px;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url(2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: antiquewhite;
+    text-align: center;
+    width: 80%;    
+    max-width: 700px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 5px;        
+}
+.hero-text {
+    position: relative;
+    z-index: 2; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; 
+    max-width: 800px;
+    padding: 0 20px;
+    margin-bottom: 20px; 
+}
+
+.hero-text h1, 
+.hero-text p {
+    margin: 0;
+}
+.mid-plane,
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.mid-plane {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.content {
+    color: antiquewhite;
+    text-align: center;
+    width: 80%;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.reveal-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: rgb(193, 129, 89);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s;
+}
+
+.reveal-button:hover {
+  background-color: #34495e;
+}
+
+.hidden-box {
+  display: none; 
+  max-width: 800px;
+  width: 70%;
+  padding: 30px;
+  background-color: rgba(99, 71, 54, 0.833);
+  border-top: 4px solid rgb(226, 143, 92);
+  border-radius: 12px;
+  color: antiquewhite;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+}
+.music-box {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+}
+
+.info-box {
+    float: left;
+    width: 65%;
+}
+
+.foto-box {
+    clear: both; 
+    width: 100%;
+    margin-top: 20px;
+}
+.info-box {
+  margin: 30px auto 0 auto; 
+  text-align: left;
+}
+
+.instagram-link{
+    color:rgb(153, 221, 236)
+}
+
+.foto-box {
+    margin: 20px auto 40px auto; 
+  display: none;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+p.fasilitas{
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+    font-weight: lighter;
+    font-family: "Chopin Script", cursive, sans-serif;
+}
+
+p.fasilitas2{
+    text-align: justify;
+    text-indent: 50px;
+}
+.container:has(.toggle-checkbox:checked) + .info-box {
+  display: block;
+}
+
+.container:has(.toggle-checkbox:checked) ~ .foto-box {
+  display: flex; 
+}
+
+div.kafe {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 3px dashed pink;
+}
+
+div.kafe img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+div.kafe img.top {
+    opacity: 1;
+    z-index: 2;
+}
+
+div.kafe:hover img.top {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+div.kafe img.bottom {
+    opacity: 0;
+    z-index: 1;
+}
+
+div.kafe:hover img.bottom {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+div.areanak {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 3px dashed pink;
+}
+
+div.areanak img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+div.areanak img.top {
+    opacity: 1;
+    z-index: 2;
+}
+
+div.areanak:hover img.top {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+div.areanak img.bottom {
+    opacity: 0;
+    z-index: 1;
+}
+
+div.areanak:hover img.bottom {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+div.areabaca {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 3px dashed pink;
+}
+
+div.areabaca img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+div.areabaca img.top {
+    opacity: 1;
+    z-index: 2;
+}
+
+div.areabaca:hover img.top {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+div.areabaca img.bottom {
+    opacity: 0;
+    z-index: 1;
+}
+
+div.areabaca:hover img.bottom {
+    opacity: 1;
+    transform: scale(1.1);
+}
+div.areakerja {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 3px dashed pink;
+}
+
+div.areakerja img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+div.areakerja img.top {
+    opacity: 1;
+    z-index: 2;
+}
+
+div.areakerja:hover img.top {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+div.areakerja img.bottom {
+    opacity: 0;
+    z-index: 1;
+}
+
+div.areakerja:hover img.bottom {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+div.areakomunitas {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 3px dashed pink;
+}
+
+div.areakomunitas img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+div.areakomunitas img.top {
+    opacity: 1;
+    z-index: 2;
+}
+
+div.areakomunitas:hover img.top {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+div.areakomunitas img.bottom {
+    opacity: 0;
+    z-index: 1;
+}
+
+div.areakomunitas:hover img.bottom {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+div.bookadvisor {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 3px dashed pink;
+}
+
+div.bookadvisor img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+div.bookadvisor img.top {
+    opacity: 1;
+    z-index: 2;
+}
+
+div.bookadvisor:hover img.top {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+div.bookadvisor img.bottom {
+    opacity: 0;
+    z-index: 1;
+}
+
+div.bookadvisor:hover img.bottom {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.container:has(.toggle-checkbox:checked) + .hidden-content {
+  display: flex;
+}
+
+.container:has(.toggle-checkbox:checked) ~ .rating-box {
+  display: block;
+}
+
+p.rating{
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+    font-weight: lighter;
+    font-family: "Chopin Script", cursive, sans-serif;
+}
+
+p.rating2{
+    text-align: justify;
+    text-indent: 50px;
+}
+
+.google-rating-box {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff;
+    width: 700px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.maps-icon {
+    width: 28px;
+    height: 35px;
+    margin-right: 12px;
+}
+
+.rating-top {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rating-score {
+    font-size: 16px;
+    font-weight: bold;
+    color: #202124;
+}
+
+.stars {
+    font-size: 14px;
+    color: #fbbc05; 
+    letter-spacing: 1px;
+}
+
+.review-link {
+    display: block;
+    margin-top: 2px;
+    font-size: 11px;
+    color: #1a73e8; 
+    text-decoration: none;
+}
+
+.review-link:hover {
+    text-decoration: underline;
+}
+
+img.review{
+    width: 750px;
+    height: 350px;
+}
+
+.review-card {
+    display:list-item; 
+    background-color: #ffffff;
+    width: 700px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #202124;
+    margin-left: auto;
+    text-align: justify;
+    list-style: none !important;
+    list-style-type: none !important;
+}
+
+span.title1,span.title2,span.title3{
+    font-size: smaller;
+    color:#34495e
+}
+
+.image-row {
+  display: flex; 
+  gap: 10px;         
+  width: 100%;
+}
+
+.image-row img {
+  flex: 1;  
+  border-radius: 8px;           
+  width: 100px;      
+  height: 100px;       
+  object-fit: cover;   
+}
